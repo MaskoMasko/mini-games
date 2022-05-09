@@ -102,18 +102,9 @@ export function generateGrid() {
     //res === no bueno grid
     // console.log(res);
   }
-  // let res2 = testRec(grid);
-  // console.log(res2);
 
   return grid;
 }
-// function testRec(grid: any, randomRow: any, randomCol: any): any {
-//   if (grid[randomRow][randomCol].value === undefined) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
 
 //freeRCpos je arr koji daje dostupne [row, col] za broj -> promjeni se kad se doda broj
 //grid je gird
