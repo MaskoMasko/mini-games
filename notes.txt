@@ -1,0 +1,16 @@
+Notes:
+
+tic-tac-toe - nebitan
+snek - pokusaj snake-a fail
+minesweeper - dela sve
+reel snake - malo drugaciji nacin za snake, vecinon dela neka sitnica ne dela rabi ali ok 
+hangman - manje bitan 
+turtle race- manje bitan, nez poantu tega
+
+
+sudoku - tu se nalazi bug Sudoku/utils/generateGrid.ts at insertNumbers func
+kada se generira field stavi sve tocno brojeve samo posto je random
+row i col selection, ne provjerava dali je value vec upisana u taj grid cell
+kad dodan line koji mi rabi, dojde call stack size exceeded.
+Poprilicno san sigruan da ni bug zbog kirveg base case-a. Zanima me dali je 
+moguce da san napunija call stack do kraja? 

@@ -115,6 +115,11 @@ export function generateGrid() {
 //   }
 // }
 
+//freeRCpos je arr koji daje dostupne [row, col] za broj -> promjeni se kad se doda broj
+//grid je gird
+//fields je arr koji ima info dali je broj u svaken od 9 polji (3x3)
+//num je broj
+//kadi je ovo ne dela: grid[randomRow][randomCol].value === undefined -> ako je grid[cell].value = undefined -> stavi broj else skip daj drugi broj
 function insertNumbers(
   freeRCPos: (null | string)[][],
   grid: GridInterface[][],
@@ -127,7 +132,7 @@ function insertNumbers(
   // if(grid[randomRow][randomCol].value !== undefined) return grid
   if (fields.length === 0) return grid;
 
-  //triba biti niki base case :///////////
+  //triba biti niki base case? :///////////
   // if (grid[randomRow][randomCol].value !== undefined)
   //   return insertNumbers(freeRCPos, grid, fields, num);
 
@@ -136,7 +141,6 @@ function insertNumbers(
     if (
       field.includes(JSON.stringify([randomRow, randomCol]))
       //  &&
-      // testRec(grid, randomRow, randomCol)
       // grid[randomRow][randomCol].value === undefined
     ) {
       let res = freeRCPos.map((element: any) =>
@@ -172,59 +176,3 @@ function insertNumbers(
   }
   return grid;
 }
-
-/*
-function insertNumbers(freeRCPos, grid, fields, num, visited) {
-  //base case
-  if (fields.length === 0) return grid;
-
-  //random row and col for grid
-  let randomRow = Math.floor(Math.random() * maxRows);
-  let randomCol = Math.floor(Math.random() * maxRows);
-  // if (grid[randomRow][randomCol].value !== undefined)
-  //   return insertNumbers(freeRCPos, grid, placed, fields, num, visited);
-
-  let newPosArr = [];
-  //there are in total 9 fields so it has to go through all of them  
-  for (let field of fields) {
-    //check if its already in field
-    if (field.includes(JSON.stringify([randomRow, randomCol]))) {
-      let res = freeRCPos.map((element: any) =>
-        element.map((pos: any) =>
-          pos === JSON.stringify([randomRow, randomCol]) ? true : false
-        )
-      );
-      if (
-        res.filter((el: any) => (el.includes(true) ? true : false)).length > 0
-      ) {
-        grid[randomRow][randomCol].value = num;
-        newPosArr = fields.filter(
-          (_: any, fieldId: number) => fields.indexOf(field) !== fieldId
-        );
-        visited.push(JSON.stringify([randomRow, randomCol]));
-        //return with modified fields and other
-        return insertNumbers(
-          freeRCPos.map((field: any) =>
-            field.map((pos: string) =>
-              pos?.startsWith("[" + randomRow) || pos?.endsWith(randomCol + "]")
-                ? null
-                : pos
-            )
-          ),
-          grid,
-          newPosArr,
-          num,
-          visited
-        );
-        //else return same
-      } else {
-        return insertNumbers(freeRCPos, grid, fields, num, visited);
-      }
-      //else return same
-    } else {
-      return insertNumbers(freeRCPos, grid, fields, num, visited);
-    }
-  }
-  return grid;
-}
-*/
