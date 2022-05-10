@@ -110,8 +110,8 @@ export function generateGrid() {
 //grid je gird
 //fields je arr koji ima info dali je broj u svaken od 9 polja (3x3)
 //num je broj
-//kadi je ovo ne dela: grid[randomRow][randomCol].value === undefined -> ako je grid[cell].value = undefined -> stavi broj else skip daj drugi broj
 //recursion zavrsava kad je num postavljen u svih 9 (3x3) polja
+//kad se ovo doda ne dela: grid[randomRow][randomCol].value === undefined -> ako je grid[cell].value = undefined -> stavi broj else skip daj drugi broj
 function insertNumbers(
   freeRCPos: (null | string)[][],
   grid: GridInterface[][],
