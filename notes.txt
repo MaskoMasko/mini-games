@@ -2,7 +2,7 @@ Notes:
 
 tic-tac-toe - nebitan
 snek - pokusaj snake-a fail
-minesweeper - dela sve ali ni ispolirano, tako da za flag moras drzati left click 0.5 s,
+minesweeper - dela sve ali ni ispolirano, tako da za flag moras drzati left click 1 s ako se ne varan,
 s tin da nimas mogucnost brisanja zastavi :/
 reel snake - malo drugaciji nacin za snake, vecinon dela neka sitnica ne dela rabi ali ok 
 hangman - manje bitan 
