@@ -9,7 +9,7 @@ hangman - manje bitan
 turtle race- manje bitan, nez poantu tega
 
 
-sudoku - tu se nalazi bug Sudoku/utils/generateGrid.ts at insertNumbers func
+sudoku - tu se nalazi bug Sudoku/utils/generateGrid.ts at insertNumbers func -> params su objesnjeni iznad funkcije
 kada se generira field stavi sve tocno brojeve samo posto je random
 row i col selection, ne provjerava dali je value vec upisana u taj grid cell
 kad dodan line koji mi rabi, dojde call stack size exceeded.
